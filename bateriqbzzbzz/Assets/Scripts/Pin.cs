@@ -51,24 +51,32 @@ public class Pin : MonoBehaviour
         return isInput;
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("asdasd");
-        if (collider.gameObject.tag == "jumperFemale" && !this.GetConnected())
+        Debug.Log("JumperHead attached...");
+        if (other.gameObject.CompareTag("jumperFemale") && !GetConnected())
         {
-            collider.gameObject.transform.parent.position = gameObject.transform.position;
             this.SetConnected(true);
+            Vector3 getPinRotation = new Vector3(gameObject.transform.eulerAngles.x, gameObject.transform.eulerAngles.y + 180, gameObject.transform.eulerAngles.z);
+            Vector3 getPinPosition = new Vector3(gameObject.transform.position.x - 0.045f, gameObject.transform.position.y, gameObject.transform.position.z);
+            other.gameObject.transform.parent = gameObject.transform;
+            other.gameObject.transform.eulerAngles = getPinRotation;
+            other.gameObject.transform.position = getPinPosition;
+            other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            other.gameObject.GetComponent<Collider>().enabled = false;
         }
     }
     
     void OnTriggerExit(Collider collider)
     {
-        Debug.Log("asdasd");
+        /*
         if (collider.gameObject.tag == "jumperFemale" && this.GetConnected())
         {
-            /*Vector3 asd = new Vector3(gameObject.transform.position.x+1,gameObject.transform.position.y,gameObject.transform.position.z);
-            collider.gameObject.transform.position = asd;
-            this.SetConnected(false);*/
+            collider.transform.parent = null;
+            collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            collider.gameObject.GetComponent<Collider>().enabled = true;
+            this.SetConnected(false);
         }
+        */
     }
 }

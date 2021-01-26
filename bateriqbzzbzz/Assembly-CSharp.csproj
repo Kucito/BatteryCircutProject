@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\AND_gate.cs" />
+     <Compile Include="Assets\Scripts\DragObject.cs" />
      <Compile Include="Assets\Scripts\Pin.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\Chip.cs" />

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,5 +49,26 @@ public class Pin : MonoBehaviour
     public bool IsInput()
     {
         return isInput;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log("asdasd");
+        if (collider.gameObject.tag == "jumperFemale" && !this.GetConnected())
+        {
+            collider.gameObject.transform.parent.position = gameObject.transform.position;
+            this.SetConnected(true);
+        }
+    }
+    
+    void OnTriggerExit(Collider collider)
+    {
+        Debug.Log("asdasd");
+        if (collider.gameObject.tag == "jumperFemale" && this.GetConnected())
+        {
+            /*Vector3 asd = new Vector3(gameObject.transform.position.x+1,gameObject.transform.position.y,gameObject.transform.position.z);
+            collider.gameObject.transform.position = asd;
+            this.SetConnected(false);*/
+        }
     }
 }

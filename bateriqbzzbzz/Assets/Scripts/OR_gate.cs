@@ -6,10 +6,19 @@ public class OR_gate : MonoBehaviour
 {
     private Chip chip;
     public GameObject[] pins;
+<<<<<<< Updated upstream
     // Start is called before the first frame update
     void Start()
     {
         
+=======
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        chip = new Chip(14);
+
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame

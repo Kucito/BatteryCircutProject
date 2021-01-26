@@ -254,6 +254,8 @@ GameObject:
   - component: {fileID: 6824782450967974039}
   - component: {fileID: 1587025970020097697}
   - component: {fileID: 8732084913183659008}
+  - component: {fileID: 1919226808847109248}
+  - component: {fileID: 4866965937200315264}
   m_Layer: 0
   m_Name: Boole
   m_TagString: Untagged
@@ -325,6 +327,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1919226808847109248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949190323988306265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b8c4f8f59a93d4283c9b42343bb259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4866965937200315264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949190323988306265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a36418e35c35e4f92218bfcfe31f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2350544346009528422
 GameObject:
   m_ObjectHideFlags: 0

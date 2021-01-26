@@ -17,7 +17,7 @@ public class OR_gate : MonoBehaviour
     {
         for (int i = 0; i < chip.PinLength()/2-1; i+=3)
         {
-            if ((chip.GetPin(i).IsInput() || chip.GetPin(i + 1).IsInput()) && (chip.GetPin(i).GetOn() && chip.GetPin(i + 1).GetOn()))
+            if ((chip.GetPin(i).IsInput() && chip.GetPin(i + 1).IsInput()) && (chip.GetPin(i).GetOn() || chip.GetPin(i + 1).GetOn()))
             {
                 chip.GetPin(i+2).SetOn(true);
             }
@@ -28,7 +28,7 @@ public class OR_gate : MonoBehaviour
         }
         for (int i = chip.PinLength()/2+1; i < chip.PinLength()-2; i+=3)
         {
-            if ((chip.GetPin(i).IsInput() || chip.GetPin(i + 1).IsInput()) && (chip.GetPin(i).GetOn() && chip.GetPin(i + 1).GetOn()))
+            if ((chip.GetPin(i).IsInput() && chip.GetPin(i + 1).IsInput()) && (chip.GetPin(i).GetOn() || chip.GetPin(i + 1).GetOn()))
             {
                 chip.GetPin(i+2).SetOn(true);
             }
